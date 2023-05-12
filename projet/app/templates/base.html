@@ -1,0 +1,115 @@
+
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>Sidebar 07</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static 'sidebar/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'sidebar/css/mystyle.css' %}">
+	<link href="{% static 'interfaceDes/css/styles.css' %}" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="mysidebar" class="active">
+				<h1><a href="index.html" class="logo">ESI.</a></h1>
+        <ul class="list-unstyled list-menu components mb-5">
+          <li class="active">
+            <a href="{% url 'home' %}"><span class="far fa-chart-bar" style="color: #e3dee4;"></span> dashboard</a>
+          </li>
+		      <li>
+            <a href="{% url 'afficherStage' %}" style="color: #e3dee4;"><span class="fa fa-sticky-note"></span> Stages</a>
+          </li>
+          <li>
+              <a href="{% url 'afficherStagiaire' %}"style="color: #e3dee4;"><span class="fa fa-user"></span>Stagiaires</a>
+          </li>
+          <li>
+			      <a href="{% url 'afficherEncadreur' %}"style="color: #e3dee4;"><span class="fa fa-user"></span>Encadreurs</a>
+		      </li>
+          <li>
+            <a href="{% url 'afficherEntreprise' %}"style="color: #e3dee4;"><span  class="far fa-building"></span>Entreprise</a>
+          </li>
+		      <li>
+            <a href="{% url 'afficherPromoteur' %}"style="color: #e3dee4;"><span class="fa fa-user"></span>Promoteurs</span></a>
+          </li>
+          <li>
+            <a data-toggle="collapse" data-target="#tog"style="color: #e3dee4;"><span class="fa fa-sticky-note"></span>Documents</span></a>
+          </li>
+          <div id="tog" class="collapse navbar-collapse">
+           <ul>
+            <li>
+              <a href="{% url 'afficherConvention' %}"style="color: #e3dee4;"><span class="fa fa-sticky-note"></span> Conventions</a>
+            </li>
+            <li>
+              <a href="{% url 'afficherFicheSuivi' %} " style="color: #e3dee4;""><span class="fa fa-sticky-note"></span>Fiche de Suivi</a>
+            </li>
+            <li>
+              <a href="{% url 'afficherFicheEval' %}" style="color: #e3dee4;"><span class="fa fa-sticky-note"></span>Fiche d'Evaluation</a>
+            </li>
+           </ul> 
+          </div>
+          
+		      <li>
+		      	<a href="{% url 'afficherSoutenance' %}" style="color: #e3dee4;"><span class="fas fa-graduation-cap"></span>Soutenance</a>
+		      </li>
+        </ul>
+
+        <div class="footer">
+        	<p>
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Esi
+					</p>
+        </div>
+    	</nav>
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class=" navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="{% url 'logout' %}"> <button class="buttonad">
+                    Se deconnecter 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+	<script src="{% static 'sidebar/js/jquery.min.js' %}"></script>
+    <script src="{% static 'sidebar/js/popper.js' %}"></script>
+    <script src="{% static 'sidebar/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sidebar/js/main.js' %}"></script>
+	<script src="{% static 'interfaceDes/assets/demo/chart-area-demo.js' %}"></script>
+	<script src="{% static 'interfaceDes/assets/demo/chart-bar-demo.js' %}"></script>
+	<script src="{% static 'interfaceDes/js/datatables-simple-demo.js' %}"></script>
+	<script src="{% static 'interfaceDes/js/scripts.js' %}"></script>
+	<script src="{% static 'interfaceDes/js/bootstrap.bundle.min.js' %}" crossorigin="anonymous" ></script>
+	<script src="{% static 'interfaceDes/js/simple-datatables.js' %}" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+	
+   	
+
+
